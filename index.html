@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+    <div class="profile-pic"></div>
+    <h2>Saumya Gupta</h2>
+    <p>@AI/ML Enthusiast</p>
+    </aside>
+
+    <main class="main-content">
+    <nav class="nav">
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('resume')">Resume</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h1>About Me</h1>
+        <p>B.Tech AI & ML student at IGDTUW with strong academic performance (SGPA 9.91). Passionate about AI, ML, DL, and Generative AI. I've built LLMs, led open-source projects, and mentored over 150 students. I enjoy transforming ideas into scalable AI solutions.</p>
+
+        <section class="services">
+        <h2>What I'm Doing</h2>
+        <div class="cards">
+            <div class="card">
+            <h3>AI/ML Development</h3>
+            <p>LLMs, RAG, Deep Learning, NLP & Gen-AI driven projects.</p>
+            </div>
+            <div class="card">
+            <h3>Web Development</h3>
+            <p>Built responsive sites with HTML, CSS, JS, Bootstrap.</p>
+            </div>
+            <div class="card">
+            <h3>Open Source Leadership</h3>
+            <p>Led 18+ projects and mentored 150+ students across clubs.</p>
+            </div>
+            <div class="card">
+            <h3>Research & Writing</h3>
+            <p>Author on Transformer models and Deep Learning techniques.</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Saumya's leadership and depth in AI made our project exceptional."</p>
+            <span>- GDG Facilitator</span>
+        </div>
+        <div class="testimonial">
+            <p>"Excellent performance in NLP research and publication."</p>
+            <span>- ACM IGDTUW</span>
+        </div>
+        </section>
+    </section>
+
+    <section id="resume" class="resume" style="display: none;">
+        <h2>Resume</h2>
+
+        <div class="resume-section">
+        <h3>Education</h3>
+        <ul>
+            <li><strong>B.Tech AI & ML</strong> – IGDTUW (2023–27) | CGPA: 8.74 (Latest SGPA: 9.91)</li>
+            <li><strong>Class XII (CBSE)</strong> – White Leaf Public School | 90.2%</li>
+            <li><strong>Class X (CBSE)</strong> – Lotus Valley, Noida | 90.8%</li>
+        </ul>
+        </div>
+
+        <div class="resume-section">
+        <h3>Experience</h3>
+        <ul>
+            <li><strong>Data Science Intern – GeeksForGeeks</strong> (May 2025 – Present)</li>
+            <li><strong>Research Intern – ACM IGDTUW</strong> (Sep 2024 – Apr 2025)</li>
+            <li><strong>Circle Manager – GDG IGDTUW</strong> (Nov 2024 – Present)</li>
+            <li><strong>Technical Head – AI Club</strong> (May 2025 – Present)</li>
+        </ul>
+        </div>
+
+        <div class="resume-section">
+        <h3>Selected Projects</h3>
+        <ul>
+            <li><strong>MEDITRINA</strong> – AI-powered medical assistant with Gen-AI integration</li>
+            <li><strong>SkyPredict</strong> – Rain prediction system using XGBoost & Power BI</li>
+            <li><strong>AI Club Website</strong> – Fully responsive site using HTML, CSS, JS</li>
+            <li><strong>Face Recognition & Swapping</strong> – Affine transform with CV</li>
+            <li><strong>Data Synthesizer Agent</strong> – Top 5 awarded in AI research utility</li>
+        </ul>
+        </div>
+
+        <div class="resume-section">
+        <h3>Achievements</h3>
+        <ul>
+            <li>SheFi Scholar – Top 15% globally (Web3 + Blockchain)</li>
+            <li>GDG Gen AI Gold Tier + 10+ Cloud Skill Badges</li>
+            <li>Hacktoberfest 2024 + Snowscript Contributor (Top 15)</li>
+            <li>Olympiads – Gold & Silver Medals</li>
+        </ul>
+        </div>
+
+        <div class="resume-skills">
+        <h3>My Skills</h3>
+        <div class="skill-bar">
+            <p>Python, C++, Java 90%</p>
+            <div class="bar"><div class="bar-fill" style="--fill-width: 90%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <p>Machine Learning, Deep Learning 85%</p>
+            <div class="bar"><div class="bar-fill" style="--fill-width: 85%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <p>ReactJS, HTML, CSS, JS 80%</p>
+            <div class="bar"><div class="bar-fill" style="--fill-width: 80%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <p>Flask, Streamlit, OpenCV 75%</p>
+            <div class="bar"><div class="bar-fill" style="--fill-width: 75%;"></div></div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <h2>Contact</h2>
+        <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+        </form>
+    </section>
+    </main>
+</div>
+
+<script>
+    function showSection(id) {
+    const sections = document.querySelectorAll('.main-content > section');
+    sections.forEach(section => section.style.display = 'none');
+    const target = document.getElementById(id);
+    if (target) target.style.display = 'block';
+    }
+    window.onload = () => showSection('about');
+</script>
+</body>
+</html>
